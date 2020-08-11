@@ -1,0 +1,16 @@
+[MESSAGES CONTROL]
+disable=design,
+        format,
+        bare-except,
+        unneeded-not,
+        undefined-variable,
+        unused-import,
+        unused-variable,
+        missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring,
+        no-self-argument,
+        invalid-name,
+        bad-classmethod-argument,
+        bad-mcs-classmethod-argument,
+        f-string-without-interpolation

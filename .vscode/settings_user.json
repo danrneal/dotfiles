@@ -1,0 +1,29 @@
+{
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.toml": "ini",
+    "*pylintrc": "ini"
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "sync.gist": "f3400d6ec19575467955ba62f933832b",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "vim.hlsearch": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#98C379", "#282C34"],
+  "vim.statusBarColors.insert": ["#61AFEF", "#282C34"],
+  "vim.statusBarColors.visual": ["#C678DD", "#282C34"],
+  "vim.statusBarColors.visualline": ["#C678DD", "#282C34"],
+  "vim.statusBarColors.visualblock": ["#C678DD", "#282C34"],
+  "vim.statusBarColors.replace": ["#E06C75", "#282C34"],
+  "vim.statusBarColors.commandlineinprogress": ["#282C34", "#ABB2BF"],
+  "vim.statusBarColors.searchinprogressmode": ["#282C34", "#ABB2BF"],
+  "vim.statusBarColors.easymotionmode": ["#282C34", "#ABB2BF"],
+  "vim.statusBarColors.easymotioninputmode": ["#282C34", "#ABB2BF"],
+  "vim.statusBarColors.surroundinputmode": ["#282C34", "#ABB2BF"]
+}

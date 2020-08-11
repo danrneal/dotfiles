@@ -1,0 +1,12 @@
+[user]
+	email = {EMAIL}
+	name = {NAME}
+[color]
+	ui = auto
+[merge]
+	conflictstyle = diff3
+[core]
+	editor = code --wait
+	excludesfile = /home/{USERNAME}/.gitignore_global
+[pull]
+	ff = only
