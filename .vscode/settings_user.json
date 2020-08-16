@@ -1,5 +1,16 @@
 {
+  "cSpell.allowCompoundWords": true,
+  "cSpell.showStatus": false,
+  "cSpell.customUserDictionaries": [
+    {
+      "name": "user words",
+      "path": "~/.vscode/user-words.txt",
+      "addWords": true
+    }
+  ],
+  "editor.autoClosingQuotes": "beforeWhitespace",
   "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
@@ -8,8 +19,11 @@
   },
   "git.autofetch": true,
   "git.confirmSync": false,
-  "sync.gist": "f3400d6ec19575467955ba62f933832b",
-  "window.zoomLevel": 0,
+  "html.format.enable": false,
+  "javascript.format.enable": false,
+  "json.format.enable": false,
+  "prettier.singleQuote": true,
+  "typescript.format.enable": false,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
@@ -25,5 +39,8 @@
   "vim.statusBarColors.searchinprogressmode": ["#282C34", "#ABB2BF"],
   "vim.statusBarColors.easymotionmode": ["#282C34", "#ABB2BF"],
   "vim.statusBarColors.easymotioninputmode": ["#282C34", "#ABB2BF"],
-  "vim.statusBarColors.surroundinputmode": ["#282C34", "#ABB2BF"]
+  "vim.statusBarColors.surroundinputmode": ["#282C34", "#ABB2BF"],
+  "window.newWindowDimensions": "inherit",
+  "window.openWithoutArgumentsInNewWindow": "off",
+  "window.title": "${rootName}${separator}${dirty}${activeEditorShort}${separator}${appName}"
 }
