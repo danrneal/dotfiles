@@ -17,6 +17,51 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "prettier": {
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 11
+    },
+    "rules": {
+      "valid-jsdoc": [
+        "error",
+        {
+          "requireParamDescription": false,
+          "requireReturnDescription": false,
+          "requireReturn": false,
+          "prefer": {
+            "returns": "return"
+          }
+        }
+      ],
+      "require-jsdoc": [
+        "error",
+        {
+          "require": {
+            "FunctionDeclaration": true,
+            "MethodDefinition": true,
+            "ClassDeclaration": true
+          }
+        }
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/{USERNAME}/{REPO}.git"
