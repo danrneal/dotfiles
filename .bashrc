@@ -1,7 +1,6 @@
 export PATH="/home/dneal/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-export PATH="/home/dneal/.dart-sass:$PATH"
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -42,7 +41,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-*color|screen-*color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -70,7 +69,7 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*[screen.xterm*|screen.rxvt*)]
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
@@ -87,10 +86,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias diff='diff --color=auto'
 fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -127,20 +124,13 @@ source ~/.git-completion.bash
 # Change command prompt
 source ~/.git-prompt.sh
 
-# colors!
-red="\[\033[1;91m\]"
-green="\[\033[1;92m\]"
-blue="\[\033[1;94m\]"
-reset="\[\033[0m\]"
-
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-# '\u' adds the name of the current user to the prompt
-# '\$(__git_ps1)' adds git-related stuff
-# '\W' adds the name of the current directory
-export PS1="$red\u$green\$(__git_ps1)$blue \W
-$ $reset"
+RESET="\[$(tput sgr0)\]"
+RED="\[$(tput bold)$(tput setaf 1)\]"
+GREEN="\[$(tput bold)$(tput setaf 2)\]"
+YELLOW="\[$(tput bold)$(tput setaf 3)\]"
+BLUE="\[$(tput bold)$(tput setaf 4)\]"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PS1="$RED\h$YELLOW\$(_git_ps1)$BLUE \W$RESET
+$ "
