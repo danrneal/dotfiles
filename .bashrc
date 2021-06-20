@@ -1,7 +1,3 @@
-export PATH="/home/dneal/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -69,7 +65,7 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*[screen.xterm*|screen.rxvt*)]
+xterm*|rxvt*|screen.xterm*|screen.rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
@@ -132,5 +128,5 @@ GREEN="\[$(tput bold)$(tput setaf 2)\]"
 YELLOW="\[$(tput bold)$(tput setaf 3)\]"
 BLUE="\[$(tput bold)$(tput setaf 4)\]"
 
-export PS1="$RED\h$YELLOW\$(_git_ps1)$BLUE \W$RESET
+export PS1="$RED\h$YELLOW\$(__git_ps1)$BLUE \w$RESET
 $ "
