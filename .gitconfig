@@ -1,6 +1,7 @@
 [user]
 	email = {EMAIL}
 	name = {NAME}
+    signingkey = {GPG_KEY}
 [color]
 	ui = auto
 [merge]
